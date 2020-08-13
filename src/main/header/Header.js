@@ -22,7 +22,20 @@ function Header() {
           name="Dashboard"
           children={<Link to="/dashboard">Dashboard</Link>}
         />
+        <Menu.Item
+          name="Payments"
+          children={<Link to="/payments">Payments</Link>}
+        />
+        <Menu.Item
+          name="Subscriptions"
+          children={<Link to="/subscriptons">Subscriptions</Link>}
+        />
+        <Menu.Item
+          name="Invoices"
+          children={<Link to="/invoices">Invoices</Link>}
+        />
         <Menu.Item name="About" children={<Link to="/about">About</Link>} />
+
         {isLoggedIn() ? (
           <Menu.Menu position="right">
             <Menu.Item name="logout" onClick={onLogoutClick} />

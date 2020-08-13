@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Grid } from "semantic-ui-react";
-import { Button, Form, Card } from "semantic-ui-react";
+import { Grid, Button, Form, Card } from "semantic-ui-react";
 import { login, isLoggedIn } from "../../lib/Auth";
 import GoogleLogin from "react-google-login";
 

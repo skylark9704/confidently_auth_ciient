@@ -42,6 +42,9 @@ Axios.interceptors.response.use(
     if (error.response.status === 401 && !originalRequest._retry) {
       originalRequest._retry = true;
       const refreshToken = getRefreshToken();
+      if (!refreshToken) {
+        logout();
+      }
       return Axios.post("http://localhost:8000/api/v1/token/refresh", {
         refresh: refreshToken,
       }).then((res) => {
